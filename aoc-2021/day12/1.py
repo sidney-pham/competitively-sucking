@@ -24,6 +24,7 @@ def solve(start, end):
 
     return _solve(start, end, set())
 
+
 res = solve("start", "end")
 for path in res:
     print(",".join(path))
