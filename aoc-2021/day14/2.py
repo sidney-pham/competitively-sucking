@@ -21,10 +21,8 @@ for _ in range(40):
         if x == 0:
             continue
         pair_count[pair] -= x
-        a1 = a + rules[pair]
-        a2 = rules[pair] + b
-        pair_count[a1] += x
-        pair_count[a2] += x
+        pair_count[a + rules[pair]] += x
+        pair_count[rules[pair] + b] += x
 
 double_counter = defaultdict(int)
 for pair, count in pair_count.items():
